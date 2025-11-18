@@ -1,0 +1,232 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    max-width: 100%;
+    max-height: 50%;
+}
+.login-container{
+   
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100vh;
+    color:#ee6705;
+     background-image: url(photo.avif);
+
+}
+
+.input-group{
+    display: block;
+    font-size: 14px;
+    color: #1370e9;
+    margin-bottom: 5px;
+}
+.login-btn{
+    width: 15%;
+    padding: 12px;
+    border-radius:5px ;
+}
+.login-btn:hover{
+background-color: green;
+}
+.input-group input{
+padding: 10px;
+border: 2px solid;
+font-size: 14px;
+}
+.input-group label{
+    display: block;
+    font-size: 30px;
+    margin-bottom:5px ;
+    color:white;
+    
+}
+
+
+.footer-text{
+    margin-top: 25px;
+    color:#ebe3e3;
+    font-size: 25px;
+}
+
+
+.reset-container {
+  background-color: #1a252f;
+  padding: 40px 30px;
+  width: 60%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  margin-top: 40px;
+  margin-right: 60px;
+}
+
+/* Heading */
+.reset-container h2 {
+  margin-bottom: 60px;
+  color: #eadada;
+}
+
+/* Description text */
+.reset-container p {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+
+/*view=======student table=====*/
+.section-container{
+  color: blue;
+}
+.table{
+    
+    border-collapse: collapse;background: white;
+}
+th, td{
+    padding: 12px;
+    border: 2px solid #ccc;
+    text-align: center;
+}
+
+.view-btn:hover{
+    background-color: green;
+}
+.view-btn{
+    font-size: 15px;
+    border: 2px solid;
+   
+}
+.delete-btn:hover{
+    background-color: red;
+}
+.delete-btn{
+    font-size: 15px;
+    border: 2px solid;
+}
+
+/*forgot password*/
+.reset-container{
+  background-color:grey;
+  height: 100vh;
+  width: 100%;
+}
+.reset-btn{
+    margin-top: 12px;
+    border:3px solid;
+    font-size: 20px;
+}
+.reset-btn:hover{
+    color: green;
+}
+
+
+/* Sidebar */
+.sidebar {
+  background-color:grey;
+  padding: 20px;
+  height: 90vh;
+  width: 100%;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: black;
+  margin-right: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+ color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.sidebar ul li a:hover {
+color: #0bd419;
+text-decoration: underline;
+}
+/* Student Table */
+.student-section h2 {
+  margin-bottom: 15px;
+}
+/*===register===*/
+.dashboard-container{
+  width: 100%;
+  background-color: grey;
+  height: 100%;
+  display: flex;
+}
+.container {
+  width:300%;
+  margin: 0;
+  background-color: grey;
+  border-radius: 8px;
+  box-shadow: 0 0 10px;
+ 
+}
+.sidebar{
+  width: 20%;
+  color: #e42626;
+
+}
+.container h1{
+  color: black;
+  font-weight: bold;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #111211;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #262525;
+  border-radius: 4px;
+}
+
+.btn {
+  width: 50%;
+  padding: 2px;
+  background-color: #ee6705;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 40px;
+  font-weight: 300px;
+}
+
+.btn:hover {
+  background-color: #0bd419;
+}
+.link{
+  color: orangered;
+}

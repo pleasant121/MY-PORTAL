@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+    </head>
+    <body>
+    <div class="container">
+        <div class="sidebar">
+        <h1>Register student</h1>
+        <form id="registerForm">
+            <diiv class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter full name" required>
+            <label for="school">school</label>
+            <input type="text" id="school" placeholder="Enter your school" required>
+            <label for="Department">Department</label>
+            <input type="text" id="department" placeholder="Enter your Department" required>
+            <label for="level">level</label>
+            <input type="text" id="level" placeholder="Enter your level" required>
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter your phone number" required>
+            <button type="submit" class="btn">Register</button>
+        <p id="statusMessage" style="margin-top: 10px;"></p>
+        <div class="link">
+        <p><a href="dashboard.html"><B>BACK TO DASHBORD</B></p>
+        </div>
+        </form>
+    <!-- Firebase SDKs -->
+<script type="module">
+  // Import Firebase functions (v9+ modular)
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyDc-n6pFi-lCyq-vBSfejXhTisjCv_QrKA",
+  authDomain: "myportal-febda.firebaseapp.com",
+  projectId: "myportal-febda",
+  storageBucket: "myportal-febda.firebasestorage.app",
+  messagingSenderId: "118865235361",
+  appId: "1:118865235361:web:2df541c18cd2a14e3b4fe0",
+  measurementId: "G-3GSQP4K061"
+};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+   // Form submit logic
+  const form = document.getElementById("registerForm");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const fullName = document.getElementById("fullName").value;
+    const school = document.getElementById("school").value;
+   const department = document.getElementById( "department").value;
+   const level  = document.getElementById("level").value;
+   const phone  = document.getElementById("phone").value;
+
+    try {
+      await addDoc(collection(db, "students"), {
+        fullName: fullName,
+        school: school,
+        department: department,
+        level:level,
+        phone:phone,
+        timestamp: new Date()
+      });
+
+      alert("✅ Student registered successfully!");
+      form.reset();
+    } catch (error) {
+      console.error("❌ Error adding student: ", error);
+      alert("Something went wrong — check your console for details.");
+    }
+  });
+</script>
+  </script>
+
